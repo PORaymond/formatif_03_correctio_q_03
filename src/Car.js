@@ -5,6 +5,12 @@ class Car extends Component {
       couleurSt:'rouge', marqueSt:'Reh', kmSt:'100 km',
       couleurStFinal:'',marqueStFinal:'Reh', kmStFinal:'100 km',
    }
+   onChangerVoiture  = () =>{ this.setState(
+      {couleurStFinal: this.state.couleurSt,
+            marqueStFinal: this.state.marqueSt,
+            kmStFinal: this.state.kmSt}
+
+      )}
    onCouleurChange = (e) => {
       this.setState({couleurSt: e.target.value});
    }
@@ -28,7 +34,7 @@ class Car extends Component {
             <p>
                Entrer kilométrage : <input type="text" placeholder="kilométrage" onChange = {this.onKmChange}/>
             </p>
-            <button onClick={this.changerVoiture}></button><br/>
+            <button onClick={this.onChangerVoiture}>afficher</button><br/>
             <p>la couleur est {this.state.couleurStFinal}</p>
             <p>la marque est {this.state.marqueStFinal}</p>
             <p>le kilométrage est{this.state.kmStFinal}</p>
