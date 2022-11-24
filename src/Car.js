@@ -6,6 +6,9 @@ class Car extends Component {
       return(
          <div>
             <h1>Une voiture</h1>
+            {this.props.couleur}<br/>
+            {this.props.marque}<br/>
+            {this.props.km}
          </div>
       );
    }
