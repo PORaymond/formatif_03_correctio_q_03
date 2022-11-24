@@ -6,9 +6,15 @@ class Car extends Component {
       return(
          <div>
             <h1>Une voiture</h1>
-            {this.props.couleur}<br/>
-            {this.props.marque}<br/>
-            {this.props.km}
+            <p>
+               Entrer couleur : <input type="text" placeholder="couleur"/>
+            </p>
+            <p>
+               Entrer marque : <input type="text" placeholder="marque"/>
+            </p>
+            <p>
+               Entrer kilométrage : <input type="text" placeholder="kilométrage"/>
+            </p>
          </div>
       );
    }
