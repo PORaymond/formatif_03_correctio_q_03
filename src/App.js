@@ -10,7 +10,7 @@ class App extends Component {
   return (
     <div className="App">
       <h1>Exercice 3</h1>
-      <Car />
+      <Car couleur = "rouge" marque = "Toyota" km = "100km"/>
     </div>
   );
   }
