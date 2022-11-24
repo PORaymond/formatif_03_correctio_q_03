@@ -2,7 +2,8 @@ import {Component} from "react";
 
 class Car extends Component {
    state = {
-      couleurSt:'rouge', marqueSt:'Reh', kmSt:'100 km'
+      couleurSt:'rouge', marqueSt:'Reh', kmSt:'100 km',
+      couleurStFinal:'',marqueStFinal:'Reh', kmStFinal:'100 km',
    }
    onCouleurChange = (e) => {
       this.setState({couleurSt: e.target.value});
@@ -28,9 +29,9 @@ class Car extends Component {
                Entrer kilométrage : <input type="text" placeholder="kilométrage" onChange = {this.onKmChange}/>
             </p>
             <button onClick={this.changerVoiture}></button><br/>
-            <p>la couleur est {this.state.couleurSt}</p>
-            <p>la marque est {this.state.marqueSt}</p>
-            <p>le kilométrage est{this.state.kmSt}</p>
+            <p>la couleur est {this.state.couleurStFinal}</p>
+            <p>la marque est {this.state.marqueStFinal}</p>
+            <p>le kilométrage est{this.state.kmStFinal}</p>
 
          </div>
       );
